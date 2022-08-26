@@ -1,0 +1,96 @@
+﻿<div class="text-center">
+    <h1 class="myproducts">My Products</h1>
+</div>
+<div class="row">
+    @foreach (var i in Model)
+    {
+        <div class="col-xl-4 col-md-6 col-12 mt-4">
+            <div class="card">
+                <div class="card-header">
+                    @i.notName
+                </div>
+                <div class="card-body">
+                    @i.ProductContent
+                </div>
+                <div class="card-footer">
+                    <a class="btn btn-outline-danger" asp-route-id="@i.ProductId" asp-action="RemoveProduct">Delete</a>
+                    <a onclick="$('#UpdateProductModal').modal('show')" data-toggle="modal" asp-route-id="@i.ProductId" asp-controller="Home" asp-action="UpdateProduct">Update Product</a>
+                </div>
+            </div>
+        </div>
+    }
+</div>
+
+<!-- Create pro -->
+<div class="modal" id="ProductModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Create New Product</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <form method="post" action="/Home/AddProduct">
+                <div class="modal-body">
+                    <div class="form-group">
+                        <input type="text" name="ProductId" id="ProductId" class="form-control d-none" placeholder="ID will be generated automaticly" disabled />
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="notName" id="notName" class="form-control" placeholder="Product Header" required />
+                    </div>
+                    <div class="form-group">
+                        <textarea class="form-control" name="ProductContent" id="ProductContent" rows="3" placeholder="Enter Your Product Here.." required></textarea>
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn" data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-outline-success">Create</button>
+
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+
+
+<!-- Update prod -->
+<div class="modal" id="UpdateProductModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Update Product</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <form method="post" action="/Home/UpdateProduct">
+                <div class="modal-body">
+                    @foreach (var i in Model)
+                    {
+                        <div class="form-group">
+                            <input type="text" name="ProductId" id="ProductId" class="form-control d-none" placeholder="@i.ProductId" disabled />
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="notName" id="notName" class="form-control" value="@i.notName" required />
+                        </div>
+                        <div class="form-group">
+                            <!-- update ettikten sonra yeni bir not olusuyor BUG -->
+                            <textarea class="form-control" name="ProductContent" id="ProductContent" rows="3" required>@i.ProductContent</textarea>
+                        </div>
+                    }
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn" data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-outline-success">Update</button>
+
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</div>

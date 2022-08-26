@@ -1,0 +1,12 @@
+C:\Users\Erenyalc\source\repos\final_project\businness\bin\Debug\net5.0\businness.deps.json
+C:\Users\Erenyalc\source\repos\final_project\businness\bin\Debug\net5.0\businness.dll
+C:\Users\Erenyalc\source\repos\final_project\businness\bin\Debug\net5.0\businness.pdb
+C:\Users\Erenyalc\source\repos\final_project\businness\obj\Debug\net5.0\businness.csproj.AssemblyReference.cache
+C:\Users\Erenyalc\source\repos\final_project\businness\obj\Debug\net5.0\businness.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Erenyalc\source\repos\final_project\businness\obj\Debug\net5.0\businness.AssemblyInfoInputs.cache
+C:\Users\Erenyalc\source\repos\final_project\businness\obj\Debug\net5.0\businness.AssemblyInfo.cs
+C:\Users\Erenyalc\source\repos\final_project\businness\obj\Debug\net5.0\businness.csproj.CoreCompileInputs.cache
+C:\Users\Erenyalc\source\repos\final_project\businness\obj\Debug\net5.0\businness.dll
+C:\Users\Erenyalc\source\repos\final_project\businness\obj\Debug\net5.0\refint\businness.dll
+C:\Users\Erenyalc\source\repos\final_project\businness\obj\Debug\net5.0\businness.pdb
+C:\Users\Erenyalc\source\repos\final_project\businness\obj\Debug\net5.0\ref\businness.dll
